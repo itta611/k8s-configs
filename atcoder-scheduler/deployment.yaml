@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atcoder-scheduler-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atcoder-scheduler
+  template:
+    metadata:
+      labels:
+        app: atcoder-scheduler
+    spec:
+      dnsPolicy: 'Default'
+      containers:
+        - name: atcoder-scheduler
+          image: itta/atcoder-scheduler:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
