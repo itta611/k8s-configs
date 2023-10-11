@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: itta-dev-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: itta-dev
+  template:
+    metadata:
+      labels:
+        app: itta-dev
+    spec:
+      dnsPolicy: 'Default'
+      containers:
+        - name: itta-dev
+          image: itta/itta.dev:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
