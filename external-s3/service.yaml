@@ -5,6 +5,5 @@ metadata:
 spec:
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 9000
+      port: 9000
   clusterIP: None
