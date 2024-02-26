@@ -3,8 +3,8 @@ kind: Service
 metadata:
   name: external-s3
 spec:
-  type: ExternalName
-  externalName: 192.168.1.201
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 9000
+  ClusterIP: None
