@@ -23,4 +23,4 @@ spec:
               service:
                 name: external-s3
                 port:
-                  number: 9000
+                  number: 80
