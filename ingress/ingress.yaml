@@ -17,7 +17,7 @@ spec:
                 name: itta-dev
                 port:
                   number: 80
-    - host: storage.itta.dev
+    - host: s3.itta.dev
       http:
         paths:
           - path: /
