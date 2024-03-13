@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Pod
 metadata:
-  name: stats-manager-daemonset
+  name: stats-manager-pod
   labels:
     app: stats-manager
 spec:
@@ -19,3 +19,5 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 2784
+      nodeSelector:
+        node-role.kubernetes.io/master: ''

@@ -20,5 +20,3 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 2784
-      nodeSelector:
-        node-role.kubernetes.io/master: ''
