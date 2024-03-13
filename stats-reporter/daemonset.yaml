@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: stats-reporter-daemonset
+  labels:
+    app: stats-reporter
+spec:
+  selector:
+    matchLabels:
+      app: stats-reporter
+  template:
+    metadata:
+      labels:
+        app: stats-reporter
+    spec:
+      containers:
+        - name: stats-reporter
+          command: ['./stats-reporter']
+          args: ['192.168.1.101']
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 2784
+      nodeSelector:
+        node-role.kubernetes.io/master: ''

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: stats-manager
+spec:
+  selector:
+    app: stats-manager
+  ports:
+    - name: http
+      protocol: TCP
+      port: 2784
+  type: ClusterIP

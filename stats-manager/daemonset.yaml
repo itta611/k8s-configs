@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: stats-manager-daemonset
+  labels:
+    app: stats-manager
+spec:
+  selector:
+    matchLabels:
+      app: stats-manager
+  template:
+    metadata:
+      labels:
+        app: stats-manager
+    spec:
+      containers:
+        - name: stats-manager
+          image: itta/stats-manager:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 2784
