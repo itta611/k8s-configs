@@ -11,7 +11,10 @@ spec:
       imagePullPolicy: Always
       ports:
         - containerPort: 2784
-  tolerations:
-    - key: 'node-role.kubernetes.io/master'
-      operator: 'Exists'
-      effect: 'NoSchedule'
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: node-role.kubernetes.io/master
+                operator: Exists
