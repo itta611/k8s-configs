@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: stats-manager
+  name: stats-reporter
 spec:
   selector:
-    app: stats-manager
+    app: stats-reporter
   ports:
     - name: http
       protocol: TCP
