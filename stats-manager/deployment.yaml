@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stats-manager-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stats-manager
+  template:
+    metadata:
+      labels:
+        app: stats-manager
+    spec:
+      dnsPolicy: 'Default'
+      containers:
+        - name: stats-manager
+          image: itta/stats-manager:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 2784
