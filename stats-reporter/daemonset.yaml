@@ -16,7 +16,7 @@ spec:
       containers:
         - name: stats-reporter
           command: ['stats-reporter']
-          args: ['10.43.176.100']
+          args: ['10.42.1.18']
           image: itta/stats-reporter:latest
           imagePullPolicy: Always
           ports:
