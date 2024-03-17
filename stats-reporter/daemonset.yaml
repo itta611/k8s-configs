@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: stats-reporter
-          command: ['./stats-reporter']
+          command: ['stats-reporter']
           args: ['192.168.1.101']
           image: itta/stats-reporter:latest
           imagePullPolicy: Always
