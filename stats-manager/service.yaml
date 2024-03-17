@@ -10,4 +10,3 @@ spec:
       protocol: TCP
       port: 2784
   type: ClusterIP
-  dnsPolicy: ClusterFirst
