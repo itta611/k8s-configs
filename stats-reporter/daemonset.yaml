@@ -16,7 +16,7 @@ spec:
       containers:
         - name: stats-reporter
           command: ['stats-reporter']
-          args: ['stats-manager.default.svc.cluster.local']
+          args: ['10.43.176.100']
           image: itta/stats-reporter:latest
           imagePullPolicy: Always
           ports:
