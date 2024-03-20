@@ -18,7 +18,7 @@ spec:
           env:
             - name: API_ENDPOINT
               value: ['stats-manager.default.svc.cluster.local']
-          image: itta/itta.dev:latest
+          image: itta/itta.dev:dev
           imagePullPolicy: Always
           ports:
             - containerPort: 80
