@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: itta-dev-development
+spec:
+  selector:
+    app: itta-dev-development
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: ClusterIP

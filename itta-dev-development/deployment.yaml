@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: itta-dev-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: itta-dev-development
+  template:
+    metadata:
+      labels:
+        app: itta-dev-development
+    spec:
+      dnsPolicy: 'Default'
+      containers:
+        - name: itta-dev-development
+          env:
+            - name: API_ENDPOINT
+              value: ['stats-manager.default.svc.cluster.local']
+          image: itta/itta.dev:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
