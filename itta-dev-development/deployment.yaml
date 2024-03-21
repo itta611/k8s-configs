@@ -17,7 +17,7 @@ spec:
         - name: itta-dev-development
           env:
             - name: API_ENDPOINT
-              value: 'stats-manager.default.svc.cluster.local'
+              value: 's3.itta.dev/dump/dummyStatsList.json'
           image: itta/itta.dev:dev
           imagePullPolicy: Always
           ports:
