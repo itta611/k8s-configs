@@ -12,7 +12,6 @@ spec:
       labels:
         app: itta-dev
     spec:
-      dnsPolicy: 'Default'
       containers:
         - name: itta-dev
           image: itta/itta.dev:main
